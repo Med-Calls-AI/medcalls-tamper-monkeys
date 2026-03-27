@@ -5,7 +5,7 @@
 // @description  Force the components sidebar to w-[400px] and fix truncation/scrolling
 // @author       You
 // @match        https://dashboard.retellai.com/agents*
-// @icon         https://dashboard.retellai.com/favicon.ico
+// @icon         https://dashboard.retellai.com/favicon-dark.ico
 // @grant        none
 // ==/UserScript==
 

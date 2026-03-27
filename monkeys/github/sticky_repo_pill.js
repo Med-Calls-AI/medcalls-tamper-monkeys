@@ -7,6 +7,7 @@
 // @match        https://github.com/*/*/pulls/*
 // @run-at       document-idle
 // @grant        none
+// @icon         https://github.githubassets.com/favicons/favicon-dark.png
 // ==/UserScript==
 
 (function () {

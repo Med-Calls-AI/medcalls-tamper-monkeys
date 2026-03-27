@@ -1,0 +1,136 @@
+<div class="ReactModalPortal">
+  <div
+    class="ReactModal__Overlay ReactModal__Overlay--after-open"
+    style="
+      position: absolute;
+      inset: 422.42px auto auto 1111.84px;
+      background-color: transparent;
+      z-index: 1000;
+      transform: translate(-50%, -50%);
+      align-items: start;
+    "
+  >
+    <div
+      class="ReactModal__Content ReactModal__Content--after-open"
+      tabindex="-1"
+      role="dialog"
+      aria-modal="true"
+      style="
+        position: absolute;
+        inset: 50% auto auto 50%;
+        border: 1px solid var(--stroke-soft-200);
+        background: var(--bg-white-0);
+        overflow: hidden;
+        border-radius: 12px;
+        outline: none;
+        padding: 16px;
+        margin-right: -50%;
+        transform: translate(-48.8%, -8%);
+        width: 360px;
+        height: auto;
+      "
+    >
+      <div class="flex flex-col gap-3">
+        <div class="flex flex-row items-center justify-between">
+          <div
+            class="text-base font-medium leading-normal text-text-strong-950"
+          >
+            Variables
+          </div>
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent h-[32px] w-[32px] rounded-full p-0 text-gray-500 hover:text-gray-700"
+            aria-label="Close"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                d="M9.99956 8.93949L13.7121 5.22699L14.7726 6.28749L11.0601 9.99999L14.7726 13.7125L13.7121 14.773L9.99956 11.0605L6.28706 14.773L5.22656 13.7125L8.93906 9.99999L5.22656 6.28749L6.28706 5.22699L9.99956 8.93949Z"
+                fill="var(--icon-sub-600)"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="text-sm font-medium leading-normal text-text-strong-950">
+            Variable Name
+          </div>
+          <input
+            class="flex w-full border border-input bg-bg-white-0 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:border-stroke-strong-950 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 px-3 h-9 rounded-lg"
+            placeholder="e.g. email / age"
+            value="I have a very long lorem ipsemI have a very long lorem ipsem"
+          />
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="text-sm font-medium leading-normal text-text-strong-950">
+            Description
+          </div>
+          <textarea
+            class="flex min-h-[80px] w-full border border-input bg-bg-white-0 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:border-stroke-strong-950 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 h-8 resize-none rounded-lg"
+            placeholder="e.g. Extract the user's email address from the conversation"
+            rows="3"
+          >
+I have a very long lorem ipsemI have a very long lorem ipsem
+I have a very long lorem ipsemI have a very long lorem ipsem
+I have a very long lorem ipsem
+I have a very long lorem ipsemI have a very long lorem ipsem</textarea
+          >
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="flex flex-row gap-1">
+            <div
+              class="text-sm font-medium leading-normal text-text-strong-950"
+            >
+              Variable Type
+            </div>
+            <div class="text-sm font-normal leading-tight text-text-sub-600">
+              (Optional)
+            </div>
+          </div>
+          <button
+            type="button"
+            role="combobox"
+            aria-controls="radix-_r_20o_"
+            aria-expanded="false"
+            aria-autocomplete="none"
+            dir="ltr"
+            data-state="closed"
+            class="flex w-full items-center justify-between border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none data-[state=open]:ring-2 data-[state=open]:ring-ring data-[state=open]:ring-offset-2 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;&gt;span]:line-clamp-1 hover:shadow-[0px_0px_0px_3px_theme(colors.bg-weak-50)] [&amp;[data-state=open]&gt;svg]:rotate-180 h-9 rounded-lg"
+          >
+            <span style="pointer-events: none">Text</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="ml-2 h-4 w-4 opacity-50 transition-transform duration-200"
+              aria-hidden="true"
+            >
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-row justify-end gap-2">
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground px-2 h-8 rounded-lg"
+          >
+            Cancel</button
+          ><button
+            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-8 rounded-lg p-2.5"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,6 +7,7 @@
 // @match        https://rowy.app/*
 // @grant        none
 // @run-at       document-idle
+// @icon         https://rowy.app/favicon.ico
 // ==/UserScript==
 
 (function() {

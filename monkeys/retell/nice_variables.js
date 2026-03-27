@@ -8,7 +8,7 @@
 // @run-at       document-end
 // @grant        GM_registerMenuCommand
 // @grant        none
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
+// @icon         https://dashboard.retellai.com/favicon-dark.ico
 // ==/UserScript==
 
 (() => {
