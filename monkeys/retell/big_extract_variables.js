@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Retell: Bigger Extract Variables Modal
 // @namespace    http://tampermonkey.net/
-// @version      2026-03-27.1
+// @version      2026-03-27.2
 // @description  Make the Retell variables modal larger, resizable, and better at handling long names and descriptions.
 // @author       You
 // @match        https://dashboard.retellai.com/*
@@ -211,9 +211,7 @@
         const nameField = findNameField(dialog);
         const descriptionField = findDescriptionField(dialog);
         const footerRow = findFooterRow(dialog);
-        const descriptionLabel = descriptionField?.label || null;
         const descriptionGroup = descriptionField?.group || null;
-        const descriptionTextarea = descriptionField?.control || null;
 
         if (body instanceof HTMLElement) {
             forceStyles(body, {
@@ -264,8 +262,23 @@
             });
         }
 
-        if (descriptionGroup instanceof HTMLElement) {
-            forceStyles(descriptionGroup, {
+        applyDescriptionFieldLayout(descriptionField);
+
+        if (footerRow instanceof HTMLElement) {
+            forceStyles(footerRow, {
+                flex: "0 0 auto",
+                "padding-right": `${Math.max(16, CONSTANTS.RESIZE_HANDLE_SIZE)}px`,
+            });
+        }
+    }
+
+    function applyDescriptionFieldLayout(field) {
+        const group = field?.group || null;
+        const label = field?.label || null;
+        const textarea = field?.control || null;
+
+        if (group instanceof HTMLElement) {
+            forceStyles(group, {
                 display: "flex",
                 "flex-direction": "column",
                 flex: "1 1 auto",
@@ -275,40 +288,59 @@
             });
         }
 
-        if (descriptionLabel instanceof HTMLElement) {
-            forceStyles(descriptionLabel, {
+        if (label instanceof HTMLElement) {
+            forceStyles(label, {
                 flex: "0 0 auto",
             });
         }
 
-        if (descriptionTextarea instanceof HTMLTextAreaElement) {
-            forceStyles(descriptionTextarea, {
-                display: "block",
+        if (!(group instanceof HTMLElement)) return;
+        if (!(textarea instanceof HTMLTextAreaElement)) return;
+
+        for (const wrapper of wrapperChainBetween(group, textarea)) {
+            forceStyles(wrapper, {
+                display: "flex",
+                "flex-direction": "column",
                 flex: "1 1 auto",
-                height: "auto",
-                width: "100%",
+                "min-height": "0",
                 "min-width": "0",
-                "min-height": `${CONSTANTS.DESCRIPTION_MIN_HEIGHT}px`,
-                "max-height": "none",
-                resize: "none",
-                overflow: "auto",
-                "overflow-x": "hidden",
-                "white-space": "pre-wrap",
-                "overflow-wrap": "anywhere",
-                "word-break": "break-word",
-                "line-height": "1.45",
-                "pointer-events": "auto",
-                position: "relative",
-                "z-index": "1",
+                overflow: "hidden",
             });
         }
 
-        if (footerRow instanceof HTMLElement) {
-            forceStyles(footerRow, {
-                flex: "0 0 auto",
-                "padding-right": `${Math.max(16, CONSTANTS.RESIZE_HANDLE_SIZE)}px`,
-            });
+        forceStyles(textarea, {
+            display: "block",
+            flex: "1 1 auto",
+            height: "100%",
+            width: "100%",
+            "min-width": "0",
+            "min-height": `${CONSTANTS.DESCRIPTION_MIN_HEIGHT}px`,
+            "max-height": "none",
+            "box-sizing": "border-box",
+            "align-self": "stretch",
+            resize: "none",
+            overflow: "auto",
+            "overflow-x": "hidden",
+            "white-space": "pre-wrap",
+            "overflow-wrap": "anywhere",
+            "word-break": "break-word",
+            "line-height": "1.45",
+            "pointer-events": "auto",
+            position: "relative",
+            "z-index": "1",
+        });
+    }
+
+    function wrapperChainBetween(ancestor, descendant) {
+        const chain = [];
+        let current = descendant.parentElement;
+
+        while (current && current !== ancestor) {
+            chain.push(current);
+            current = current.parentElement;
         }
+
+        return chain.reverse();
     }
 
     function ensureNameWrapTextarea(dialog) {
@@ -359,10 +391,6 @@
     function isVariablesDialog(dialog) {
         if (!(dialog instanceof HTMLElement)) return false;
         return !!findHeaderRow(dialog) && !!findNameField(dialog) && !!findDescriptionField(dialog);
-    }
-
-    function findDescriptionTextarea(dialog) {
-        return findDescriptionField(dialog)?.control || null;
     }
 
     function findNameField(dialog) {
