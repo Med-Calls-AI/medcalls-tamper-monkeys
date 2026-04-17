@@ -14,7 +14,6 @@
 // ==/UserScript==
 
 (() => {
-    console.log("test");
   // ====== TWEAK THESE ======
 
   const DIALOG_MAX_WIDTH_PX = 1400; // overall dialog width cap
@@ -302,8 +301,6 @@
       scrollersTouched += growHeight(wrap);
       valuesAdded += upgradeValues(wrap);
     });
-
-    console.log(`[retell-tweaks] wrappers: ${wrappers.length}, rows sized: ${rowsSized}, scrollers grown: ${scrollersTouched}, value textareas added: +${valuesAdded}`);
   };
 
   // Initial apply + re-apply on re-render (throttled)
@@ -336,9 +333,5 @@
       }
       ta.remove();
     });
-
-    console.log('[retell-tweaks] cleaned up');
   };
-
-  console.log('[retell-tweaks] applied. Adjust HEIGHT_VH / NAME_COL_PCT, and re-run to change. Use __retellTweaksCleanup() to undo.');
 })();
