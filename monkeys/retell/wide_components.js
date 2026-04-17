@@ -6,6 +6,8 @@
 // @author       You
 // @match        https://dashboard.retellai.com/agents*
 // @icon         https://dashboard.retellai.com/favicon-dark.ico
+// @downloadURL  https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/retell/wide_components.js
+// @updateURL    https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/retell/wide_components.js
 // @grant        none
 // ==/UserScript==
 

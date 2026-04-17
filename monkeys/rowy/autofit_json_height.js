@@ -8,6 +8,8 @@
 // @grant        none
 // @run-at       document-idle
 // @icon         https://rowy.app/favicon.ico
+// @downloadURL  https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/rowy/autofit_json_height.js
+// @updateURL    https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/rowy/autofit_json_height.js
 // ==/UserScript==
 
 (function() {

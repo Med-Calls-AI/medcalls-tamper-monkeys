@@ -7,6 +7,8 @@
 // @match        https://dashboard.retellai.com/*
 // @icon         https://dashboard.retellai.com/favicon-dark.ico
 // @run-at       document-end
+// @downloadURL  https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/retell/big_extract_variables.js
+// @updateURL    https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/retell/big_extract_variables.js
 // @grant        none
 // ==/UserScript==
 

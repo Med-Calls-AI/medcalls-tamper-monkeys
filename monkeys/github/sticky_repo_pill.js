@@ -8,6 +8,8 @@
 // @run-at       document-idle
 // @grant        none
 // @icon         https://github.githubassets.com/favicons/favicon-dark.png
+// @downloadURL  https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/github/sticky_repo_pill.js
+// @updateURL    https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/github/sticky_repo_pill.js
 // ==/UserScript==
 
 (function () {

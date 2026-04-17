@@ -9,6 +9,8 @@
 // @grant        GM_registerMenuCommand
 // @grant        none
 // @icon         https://dashboard.retellai.com/favicon-dark.ico
+// @downloadURL  https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/retell/nice_variables.js
+// @updateURL    https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/retell/nice_variables.js
 // ==/UserScript==
 
 (() => {

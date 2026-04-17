@@ -7,6 +7,8 @@
 // @match        https://airtable.com/*
 // @match        https://*.airtable.com/*
 // @icon         https://airtable.com/favicon.ico
+// @downloadURL  https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/airtable/expanded_multiline_cell.js
+// @updateURL    https://raw.githubusercontent.com/Med-Calls-AI/medcalls-tamper-monkeys/refs/heads/master/monkeys/airtable/expanded_multiline_cell.js
 // @grant        none
 // ==/UserScript==
 
